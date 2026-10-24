@@ -1,318 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sr-Latn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milensa — Nameštaj po meri</title>
-  <meta name="description" content="Milensa — dizajn i izrada nameštaja po meri. Kuhinje, plakari, dnevni boravci i poslovni enterijeri." />
-  <meta name="theme-color" content="#6E2639" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milensa — Nameštaj po meri</title>
+    <meta
+      name="description"
+      content="Milensa — dizajn i izrada nameštaja po meri. Kuhinje, plakari, dnevni boravci i poslovni enterijeri."
+    />
+    <meta name="theme-color" content="#702B3B" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-  <!-- LOGO - Zameniti kad dobije -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="logo-mark" viewBox="0 0 64 64">
-      <path fill="currentColor" d="M6 6h12l14 22L46 6h12v52h-8V18L36 40h-8L14 18v40H6z" />
-    </symbol>
-  </svg>
-
-  <!-- HEADER -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#pocetna" class="logo" aria-label="Milensa — početna">
-        <svg class="logo__mark"><use href="#logo-mark" /></svg>
-        <span class="logo__word">Milensa</span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Glavna navigacija">
-        <ul class="nav__list">
-          <li><a href="#o-nama" class="nav__link">O nama</a></li>
-          <li><a href="#usluge" class="nav__link">Usluge</a></li>
-          <li><a href="#projekti" class="nav__link">Projekti</a></li>
-          <li><a href="#proces" class="nav__link">Proces</a></li>
-          <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
-        </ul>
-        <a href="#kontakt" class="btn btn--primary nav__cta">Zakažite konsultacije</a>
-      </nav>
-
-      <button class="burger" id="burger" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="pocetna">
-      <div class="container hero__grid">
-        <div class="hero__content reveal">
-          <p class="eyebrow">Nameštaj po meri · od 20XX.</p>
-          <h1 class="hero__title">Nameštaj koji je<br />napravljen za vaš prostor.</h1>
-          <p class="hero__lead">
-            Projektujemo i izrađujemo kuhinje, plakare i kompletne enterijere —
-            precizno, od prvog skeča do montaže.
-          </p>
-          <div class="hero__actions">
-            <a href="#kontakt" class="btn btn--primary">Zakažite konsultacije</a>
-            <a href="#projekti" class="btn btn--ghost">Pogledajte projekte</a>
-          </div>
-        </div>
-
-        <div class="hero__media reveal">
-          <!-- Zameniti sa slikama -->
-          <div class="img-ph img-ph--tall" data-label="Hero fotografija"></div>
-        </div>
-      </div>
-
-      <div class="container">
-        <ul class="stats reveal">
-          <li><strong>15+</strong><span>godina iskustva</span></li>
-          <li><strong>800+</strong><span>realizovanih projekata</span></li>
-          <li><strong>100%</strong><span>izrada u našoj radionici</span></li>
-          <li><strong>5 god.</strong><span>garancije</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- O NAMA -->
-    <section class="section" id="o-nama">
-      <div class="container split">
-        <div class="split__media reveal">
-          <div class="img-ph img-ph--square" data-label="Radionica"></div>
-        </div>
-        <div class="split__content reveal">
-          <p class="eyebrow">O nama</p>
-          <h2 class="section__title">Zanat, preciznost i pažnja prema detalju.</h2>
-          <p>
-            Milensa je porodična radionica specijalizovana za izradu nameštaja po meri.
-            Svaki komad nastaje u našem pogonu, od pažljivo odabranih materijala,
-            uz kontrolu kvaliteta u svakoj fazi.
-          </p>
-          <p>
-            Verujemo da dobar nameštaj ne treba da bude upadljiv — treba da bude tačan.
-            Da se uklopi u prostor, u način na koji živite i da traje godinama.
-          </p>
-          <a href="#proces" class="link-arrow">Kako radimo <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- USLUGE -->
-    <section class="section section--tinted" id="usluge">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Usluge</p>
-          <h2 class="section__title">Šta izrađujemo</h2>
-        </header>
-
-        <div class="services">
-          <article class="service reveal">
-            <span class="service__num">01</span>
-            <h3 class="service__title">Kuhinje</h3>
-            <p>Funkcionalne kuhinje po meri — od izbora fronta i radne ploče do ugradnje aparata.</p>
-          </article>
-          <article class="service reveal">
-            <span class="service__num">02</span>
-            <h3 class="service__title">Plakari i garderoberi</h3>
-            <p>Ugradni plakari i walk-in garderoberi koji koriste svaki centimetar prostora.</p>
-          </article>
-          <article class="service reveal">
-            <span class="service__num">03</span>
-            <h3 class="service__title">Dnevni boravak</h3>
-            <p>TV zidovi, police, komode i stolovi usklađeni sa ostatkom enterijera.</p>
-          </article>
-          <article class="service reveal">
-            <span class="service__num">04</span>
-            <h3 class="service__title">Poslovni prostori</h3>
-            <p>Kancelarije, recepcije i ugostiteljski objekti — kompletno opremanje po projektu.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJEKTI  -->
-    <section class="section" id="projekti">
-      <div class="container">
-        <header class="section__head section__head--row reveal">
-          <div>
-            <p class="eyebrow">Projekti</p>
-            <h2 class="section__title">Izdvojeni radovi</h2>
-          </div>
-          <div class="filters" role="tablist" aria-label="Filter projekata">
-            <button class="filter is-active" data-filter="all">Sve</button>
-            <button class="filter" data-filter="kuhinje">Kuhinje</button>
-            <button class="filter" data-filter="plakari">Plakari</button>
-            <button class="filter" data-filter="boravak">Boravak</button>
-            <button class="filter" data-filter="poslovni">Poslovni</button>
-          </div>
-        </header>
-
-        <!-- Lista projekata -->
-        <div class="projects">
-          <a href="#" class="project project--wide reveal" data-category="kuhinje">
-            <div class="img-ph" data-label="Projekat 1"></div>
-            <div class="project__meta"><h3>Kuhinja</h3><span>Kuhinje · 2026</span></div>
-          </a>
-          <a href="#" class="project reveal" data-category="plakari">
-            <div class="img-ph" data-label="Projekat 2"></div>
-            <div class="project__meta"><h3>Garderober</h3><span>Plakari · 2026</span></div>
-          </a>
-          <a href="#" class="project reveal" data-category="boravak">
-            <div class="img-ph" data-label="Projekat 3"></div>
-            <div class="project__meta"><h3>Polica</h3><span>Boravak · 2025</span></div>
-          </a>
-          <a href="#" class="project reveal" data-category="poslovni">
-            <div class="img-ph" data-label="Projekat 4"></div>
-            <div class="project__meta"><h3>Kancelarija</h3><span>Poslovni · 2025</span></div>
-          </a>
-          <a href="#" class="project project--wide reveal" data-category="kuhinje">
-            <div class="img-ph" data-label="Projekat 5"></div>
-            <div class="project__meta"><h3>Stan</h3><span>Kuhinje · 2025</span></div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proces -->
-    <section class="section section--dark" id="proces">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow eyebrow--light">Proces</p>
-          <h2 class="section__title">Od ideje do montaže</h2>
-        </header>
-
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num">1</span>
-            <h3>Konsultacije</h3>
-            <p>Upoznajemo vaše potrebe, prostor i budžet.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">2</span>
-            <h3>Merenje i projekat</h3>
-            <p>Precizno merenje na licu mesta i 3D vizualizacija.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">3</span>
-            <h3>Izrada</h3>
-            <p>Proizvodnja u našoj radionici uz kontrolu kvaliteta.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">4</span>
-            <h3>Montaža</h3>
-            <p>Isporuka i montaža — ostavljamo čist, gotov prostor.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!--  RECENZIJE -->
-    <section class="section">
-      <div class="container container--narrow">
-        <figure class="quote reveal">
-          <blockquote>
-            „Kuhinja je urađena tačno onako kako smo zamislili — a nekoliko detalja
-            čak i bolje. Rok je ispoštovan do dana.“
-          </blockquote>
-          <figcaption>— Ime Prezime, Beograd</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!--  CTA TRAKA (pattern iz logoa)  -->
-    <section class="cta-band">
-      <div class="container cta-band__inner reveal">
-        <h2>Imate prostor i ideju?<br />Mi imamo rešenje.</h2>
-        <a href="#kontakt" class="btn btn--light">Pošaljite upit</a>
-      </div>
-    </section>
- 
-    <section class="section" id="kontakt">
-      <div class="container split split--top">
-        <div class="split__content reveal">
-          <p class="eyebrow">Kontakt</p>
-          <h2 class="section__title">Razgovarajmo o vašem projektu.</h2>
-          <p>Pošaljite nam osnovne informacije i javićemo vam se u roku od 24 sata.</p>
-
-          <ul class="contact-list">
-            <li><span>Telefon</span><a href="tel:+381000000000">+381 00 000 0000</a></li>
-            <li><span>Email</span><a href="mailto:info@milensa.rs">info@milensa.rs</a></li>
-            <li><span>Adresa</span>Ulica i broj, Grad</li>
-            <li><span>Radno vreme</span>Pon–Pet 08–17h · Sub 09–14h</li>
-          </ul>
-        </div>
-
-        <form class="form reveal" id="contact-form" novalidate>
-          <div class="form__row">
-            <label class="field">
-              <span>Ime i prezime *</span>
-              <input type="text" name="name" required autocomplete="name" />
-            </label>
-            <label class="field">
-              <span>Telefon *</span>
-              <input type="tel" name="phone" required autocomplete="tel" />
-            </label>
-          </div>
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" />
-          </label>
-          <label class="field">
-            <span>Vrsta projekta</span>
-            <select name="type">
-              <option value="">Izaberite…</option>
-              <option>Kuhinja</option>
-              <option>Plakar / garderober</option>
-              <option>Dnevni boravak</option>
-              <option>Poslovni prostor</option>
-              <option>Drugo</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>Poruka *</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit" class="btn btn--primary btn--block">Pošalji upit</button>
-          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!--  FOOTER  -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <a href="#pocetna" class="logo logo--light">
-          <svg class="logo__mark"><use href="#logo-mark" /></svg>
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="assets/milensa_logo.png"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#pocetna" class="logo" aria-label="Milensa — početna">
+          <img
+            src="assets/milensa_logo.svg"
+            alt=""
+            class="logo__img"
+            width="42"
+            height="34"
+          />
           <span class="logo__word">Milensa</span>
         </a>
-        <p class="footer__tag">Nameštaj po meri.</p>
-      </div>
-      <nav class="footer__nav" aria-label="Footer navigacija">
-        <a href="#o-nama">O nama</a>
-        <a href="#usluge">Usluge</a>
-        <a href="#projekti">Projekti</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <span>© <span id="year"></span> Milensa. Sva prava zadržana.</span>
-    </div>
-  </footer>
 
-  <script src="js/main.js"></script>
-</body>
+        <nav class="nav" id="nav" aria-label="Glavna navigacija">
+          <ul class="nav__list">
+            <li><a href="#o-nama" class="nav__link">O nama</a></li>
+            <li><a href="#usluge" class="nav__link">Usluge</a></li>
+            <li><a href="#projekti" class="nav__link">Projekti</a></li>
+            <li><a href="#proces" class="nav__link">Proces</a></li>
+            <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+          </ul>
+          <a href="#kontakt" class="btn btn--primary nav__cta"
+            >Zakažite konsultacije</a
+          >
+        </nav>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Otvori meni"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="pocetna">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">Nameštaj po meri · od 20XX.</p>
+            <h1 class="hero__title">
+              Nameštaj koji je<br />napravljen za vaš prostor.
+            </h1>
+            <p class="hero__lead">
+              Projektujemo i izrađujemo kuhinje, plakare i kompletne enterijere
+              — precizno, od prvog skeča do montaže.
+            </p>
+            <div class="hero__actions">
+              <a href="#kontakt" class="btn btn--primary"
+                >Zakažite konsultacije</a
+              >
+              <a href="#projekti" class="btn btn--ghost">Pogledajte projekte</a>
+            </div>
+          </div>
+
+          <div class="hero__media reveal">
+            <!-- Zameniti sa slikama -->
+            <div
+              class="img-ph img-ph--tall"
+              data-label="Hero fotografija"
+            ></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <ul class="stats reveal">
+            <li><strong>15+</strong><span>godina iskustva</span></li>
+            <li><strong>800+</strong><span>realizovanih projekata</span></li>
+            <li><strong>100%</strong><span>izrada u našoj radionici</span></li>
+            <li><strong>5 god.</strong><span>garancije</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- O NAMA -->
+      <section class="section" id="o-nama">
+        <div class="container split">
+          <div class="split__media reveal">
+            <div class="img-ph img-ph--square" data-label="Radionica"></div>
+          </div>
+          <div class="split__content reveal">
+            <p class="eyebrow">O nama</p>
+            <h2 class="section__title">
+              Zanat, preciznost i pažnja prema detalju.
+            </h2>
+            <p>
+              Milensa je porodična radionica specijalizovana za izradu nameštaja
+              po meri. Svaki komad nastaje u našem pogonu, od pažljivo odabranih
+              materijala, uz kontrolu kvaliteta u svakoj fazi.
+            </p>
+            <p>
+              Verujemo da dobar nameštaj ne treba da bude upadljiv — treba da
+              bude tačan. Da se uklopi u prostor, u način na koji živite i da
+              traje godinama.
+            </p>
+            <a href="#proces" class="link-arrow"
+              >Kako radimo <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- USLUGE -->
+      <section class="section section--tinted" id="usluge">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Usluge</p>
+            <h2 class="section__title">Šta izrađujemo</h2>
+          </header>
+
+          <div class="services">
+            <article class="service reveal">
+              <span class="service__num">01</span>
+              <h3 class="service__title">Kuhinje</h3>
+              <p>
+                Funkcionalne kuhinje po meri — od izbora fronta i radne ploče do
+                ugradnje aparata.
+              </p>
+            </article>
+            <article class="service reveal">
+              <span class="service__num">02</span>
+              <h3 class="service__title">Plakari i garderoberi</h3>
+              <p>
+                Ugradni plakari i walk-in garderoberi koji koriste svaki
+                centimetar prostora.
+              </p>
+            </article>
+            <article class="service reveal">
+              <span class="service__num">03</span>
+              <h3 class="service__title">Dnevni boravak</h3>
+              <p>
+                TV zidovi, police, komode i stolovi usklađeni sa ostatkom
+                enterijera.
+              </p>
+            </article>
+            <article class="service reveal">
+              <span class="service__num">04</span>
+              <h3 class="service__title">Poslovni prostori</h3>
+              <p>
+                Kancelarije, recepcije i ugostiteljski objekti — kompletno
+                opremanje po projektu.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJEKTI  -->
+      <section class="section" id="projekti">
+        <div class="container">
+          <header class="section__head section__head--row reveal">
+            <div>
+              <p class="eyebrow">Projekti</p>
+              <h2 class="section__title">Izdvojeni radovi</h2>
+            </div>
+            <div class="filters" role="tablist" aria-label="Filter projekata">
+              <button class="filter is-active" data-filter="all">Sve</button>
+              <button class="filter" data-filter="kuhinje">Kuhinje</button>
+              <button class="filter" data-filter="plakari">Plakari</button>
+              <button class="filter" data-filter="boravak">Boravak</button>
+              <button class="filter" data-filter="poslovni">Poslovni</button>
+            </div>
+          </header>
+
+          <!-- Lista projekata -->
+          <div class="projects">
+            <a
+              href="#"
+              class="project project--wide reveal"
+              data-category="kuhinje"
+            >
+              <div class="img-ph" data-label="Projekat 1"></div>
+              <div class="project__meta">
+                <h3>Kuhinja</h3>
+                <span>Kuhinje · 2026</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="plakari">
+              <div class="img-ph" data-label="Projekat 2"></div>
+              <div class="project__meta">
+                <h3>Garderober</h3>
+                <span>Plakari · 2026</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="boravak">
+              <div class="img-ph" data-label="Projekat 3"></div>
+              <div class="project__meta">
+                <h3>Polica</h3>
+                <span>Boravak · 2025</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="poslovni">
+              <div class="img-ph" data-label="Projekat 4"></div>
+              <div class="project__meta">
+                <h3>Kancelarija</h3>
+                <span>Poslovni · 2025</span>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="project project--wide reveal"
+              data-category="kuhinje"
+            >
+              <div class="img-ph" data-label="Projekat 5"></div>
+              <div class="project__meta">
+                <h3>Stan</h3>
+                <span>Kuhinje · 2025</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proces -->
+      <section class="section section--dark" id="proces">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow eyebrow--light">Proces</p>
+            <h2 class="section__title">Od ideje do montaže</h2>
+          </header>
+
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step__num">1</span>
+              <h3>Konsultacije</h3>
+              <p>Upoznajemo vaše potrebe, prostor i budžet.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">2</span>
+              <h3>Merenje i projekat</h3>
+              <p>Precizno merenje na licu mesta i 3D vizualizacija.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">3</span>
+              <h3>Izrada</h3>
+              <p>Proizvodnja u našoj radionici uz kontrolu kvaliteta.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">4</span>
+              <h3>Montaža</h3>
+              <p>Isporuka i montaža — ostavljamo čist, gotov prostor.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!--  RECENZIJE -->
+      <section class="section">
+        <div class="container container--narrow">
+          <figure class="quote reveal">
+            <blockquote>
+              „Kuhinja je urađena tačno onako kako smo zamislili — a nekoliko
+              detalja čak i bolje. Rok je ispoštovan do dana.“
+            </blockquote>
+            <figcaption>— Ime Prezime, Beograd</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!--  CTA TRAKA (pattern iz logoa)  -->
+      <section class="cta-band">
+        <div class="container cta-band__inner reveal">
+          <h2>Imate prostor i ideju?<br />Mi imamo rešenje.</h2>
+          <a href="#kontakt" class="btn btn--light">Pošaljite upit</a>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <div class="container split split--top">
+          <div class="split__content reveal">
+            <p class="eyebrow">Kontakt</p>
+            <h2 class="section__title">Razgovarajmo o vašem projektu.</h2>
+            <p>
+              Pošaljite nam osnovne informacije i javićemo vam se u roku od 24
+              sata.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span>Telefon</span
+                ><a href="tel:+381000000000">+381 00 000 0000</a>
+              </li>
+              <li>
+                <span>Email</span
+                ><a href="mailto:info@milensa.rs">info@milensa.rs</a>
+              </li>
+              <li><span>Adresa</span>Ulica i broj, Grad</li>
+              <li><span>Radno vreme</span>Pon–Pet 08–17h · Sub 09–14h</li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="form__row">
+              <label class="field">
+                <span>Ime i prezime *</span>
+                <input type="text" name="name" required autocomplete="name" />
+              </label>
+              <label class="field">
+                <span>Telefon *</span>
+                <input type="tel" name="phone" required autocomplete="tel" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Vrsta projekta</span>
+              <select name="type">
+                <option value="">Izaberite…</option>
+                <option>Kuhinja</option>
+                <option>Plakar / garderober</option>
+                <option>Dnevni boravak</option>
+                <option>Poslovni prostor</option>
+                <option>Drugo</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Poruka *</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary btn--block">
+              Pošalji upit
+            </button>
+            <p
+              class="form__status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--  FOOTER  -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a
+            href="#pocetna"
+            class="logo logo--light"
+            aria-label="Milensa — početna"
+          >
+            <img
+              src="assets/milensa_logo.svg"
+              alt=""
+              class="logo__img"
+              width="42"
+              height="34"
+            />
+            <span class="logo__word">Milensa</span>
+          </a>
+          <p class="footer__tag">Nameštaj po meri.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigacija">
+          <a href="#o-nama">O nama</a>
+          <a href="#usluge">Usluge</a>
+          <a href="#projekti">Projekti</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> Milensa. Sva prava zadržana.</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
