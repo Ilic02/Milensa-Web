@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekti — Milensa | Realizovani nameštaj po meri</title>
+    <meta name="description" content="Pogledajte realizovane projekte: kuhinje, plakari, dnevni boravci i poslovni prostori izrađeni po meri u radionici Milensa." />
+    <link rel="canonical" href="https://www.milensa.rs/projekti.html" />
+    <meta name="theme-color" content="#702B3B" />
+
+    <!-- Open Graph (prikaz linka na Viberu, Facebook-u, LinkedIn-u) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Milensa" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:title" content="Projekti — Milensa | Realizovani nameštaj po meri" />
+    <meta property="og:description" content="Pogledajte realizovane projekte: kuhinje, plakari, dnevni boravci i poslovni prostori izrađeni po meri u radionici Milensa." />
+    <meta property="og:url" content="https://www.milensa.rs/projekti.html" />
+    <meta property="og:image" content="https://www.milensa.rs/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Milensa — početna">
+          <img src="assets/milensa_logo.svg" alt="" class="logo__img" width="42" height="34" />
+          <span class="logo__word">Milensa</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Glavna navigacija">
+          <ul class="nav__list">
+            <li><a href="o-nama.html" class="nav__link">O nama</a></li>
+            <li><a href="usluge.html" class="nav__link">Usluge</a></li>
+            <li><a href="projekti.html" class="nav__link" aria-current="page">Projekti</a></li>
+            <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--primary nav__cta">Zakažite konsultacije</a>
+        </nav>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Otvori meni"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb reveal" aria-label="Putanja">
+            <ol>
+              <li><a href="index.html">Početna</a></li>
+              <li aria-current="page">Projekti</li>
+            </ol>
+          </nav>
+          <div class="reveal">
+            <p class="eyebrow">Projekti</p>
+            <h1 class="page-hero__title">Realizovani projekti.</h1>
+            <p class="page-hero__lead">Izbor radova iz naše radionice. Izaberite kategoriju da suzite prikaz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJEKTI -->
+      <section class="section section--flush-top">
+        <div class="container">
+          <div class="filters reveal" aria-label="Filter projekata">
+            <button class="filter is-active" data-filter="all" aria-pressed="true">Sve</button>
+            <button class="filter" data-filter="kuhinje" aria-pressed="false">Kuhinje</button>
+            <button class="filter" data-filter="plakari" aria-pressed="false">Plakari</button>
+            <button class="filter" data-filter="boravak" aria-pressed="false">Boravak</button>
+            <button class="filter" data-filter="poslovni" aria-pressed="false">Poslovni</button>
+          </div>
+
+          <!-- data-category mora odgovarati data-filter vrednosti -->
+          <div class="projects">
+            <a href="#" class="project project--wide reveal" data-category="kuhinje">
+              <div class="img-ph" data-label="Projekat 1"></div>
+              <div class="project__meta">
+                <h3>Kuhinja</h3>
+                <span>Kuhinje · 2026</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="plakari">
+              <div class="img-ph" data-label="Projekat 2"></div>
+              <div class="project__meta">
+                <h3>Garderober</h3>
+                <span>Plakari · 2026</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="boravak">
+              <div class="img-ph" data-label="Projekat 3"></div>
+              <div class="project__meta">
+                <h3>Polica</h3>
+                <span>Boravak · 2025</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="poslovni">
+              <div class="img-ph" data-label="Projekat 4"></div>
+              <div class="project__meta">
+                <h3>Kancelarija</h3>
+                <span>Poslovni · 2025</span>
+              </div>
+            </a>
+            <a href="#" class="project project--wide reveal" data-category="kuhinje">
+              <div class="img-ph" data-label="Projekat 5"></div>
+              <div class="project__meta">
+                <h3>Stan</h3>
+                <span>Kuhinje · 2025</span>
+              </div>
+            </a>
+          </div>
+          <p class="projects__empty" id="projects-empty" hidden>Trenutno nema projekata u ovoj kategoriji.</p>
+        </div>
+      </section>
+
+      <!-- CTA TRAKA -->
+      <section class="cta-band">
+        <div class="container cta-band__inner reveal">
+          <h2>Imate prostor i ideju?<br />Mi imamo rešenje.</h2>
+          <a href="kontakt.html" class="btn btn--light">Pošaljite upit</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a href="index.html" class="logo logo--light" aria-label="Milensa — početna">
+            <img src="assets/milensa_logo.svg" alt="" class="logo__img" width="42" height="34" />
+            <span class="logo__word">Milensa</span>
+          </a>
+          <p class="footer__tag">Nameštaj po meri.</p>
+        </div>
+        <nav class="footer__col" aria-label="Stranice">
+          <h2 class="footer__title">Stranice</h2>
+          <a href="o-nama.html">O nama</a>
+          <a href="usluge.html">Usluge</a>
+          <a href="projekti.html">Projekti</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__title">Kontakt</h2>
+          <a href="tel:+381000000000">+381 00 000 0000</a>
+          <a href="mailto:info@milensa.rs">info@milensa.rs</a>
+          <span>Ulica i broj, Grad</span>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title">Pratite nas</h2>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> Milensa. Sva prava zadržana.</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

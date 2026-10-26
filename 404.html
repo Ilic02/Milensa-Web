@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stranica nije pronađena — Milensa</title>
+    <meta name="description" content="Tražena stranica ne postoji." />
+    <link rel="canonical" href="https://www.milensa.rs/404.html" />
+    <meta name="theme-color" content="#702B3B" />
+
+    <!-- Open Graph (prikaz linka na Viberu, Facebook-u, LinkedIn-u) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Milensa" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:title" content="Stranica nije pronađena — Milensa" />
+    <meta property="og:description" content="Tražena stranica ne postoji." />
+    <meta property="og:url" content="https://www.milensa.rs/404.html" />
+    <meta property="og:image" content="https://www.milensa.rs/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Milensa — početna">
+          <img src="assets/milensa_logo.svg" alt="" class="logo__img" width="42" height="34" />
+          <span class="logo__word">Milensa</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Glavna navigacija">
+          <ul class="nav__list">
+            <li><a href="o-nama.html" class="nav__link">O nama</a></li>
+            <li><a href="usluge.html" class="nav__link">Usluge</a></li>
+            <li><a href="projekti.html" class="nav__link">Projekti</a></li>
+            <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--primary nav__cta">Zakažite konsultacije</a>
+        </nav>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Otvori meni"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="notfound">
+        <div class="container">
+          <p class="notfound__code">404</p>
+          <h1 class="page-hero__title">Stranica nije pronađena.</h1>
+          <p class="page-hero__lead">Moguće je da je stranica premeštena ili da link nije ispravan.</p>
+          <div class="hero__actions notfound__actions">
+            <a href="index.html" class="btn btn--primary">Početna strana</a>
+            <a href="kontakt.html" class="btn btn--ghost">Kontakt</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a href="index.html" class="logo logo--light" aria-label="Milensa — početna">
+            <img src="assets/milensa_logo.svg" alt="" class="logo__img" width="42" height="34" />
+            <span class="logo__word">Milensa</span>
+          </a>
+          <p class="footer__tag">Nameštaj po meri.</p>
+        </div>
+        <nav class="footer__col" aria-label="Stranice">
+          <h2 class="footer__title">Stranice</h2>
+          <a href="o-nama.html">O nama</a>
+          <a href="usluge.html">Usluge</a>
+          <a href="projekti.html">Projekti</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__title">Kontakt</h2>
+          <a href="tel:+381000000000">+381 00 000 0000</a>
+          <a href="mailto:info@milensa.rs">info@milensa.rs</a>
+          <span>Ulica i broj, Grad</span>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__title">Pratite nas</h2>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> Milensa. Sva prava zadržana.</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
