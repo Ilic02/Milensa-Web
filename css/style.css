@@ -200,8 +200,30 @@ p + p { margin-top: 1em; }
   transition: transform .35s var(--ease);
 }
 .nav__link:hover::after,
-.nav__link[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
-.nav__link[aria-current="page"] { color: var(--bordo); }
+.nav__link[aria-current]::after { transform: scaleX(1); transform-origin: left; }
+.nav__link[aria-current] { color: var(--bordo); }
+
+/* Padajući meni (Usluge) */
+.nav__item--has-sub { position: relative; }
+.nav__sub {
+  position: absolute; top: calc(100% + .9rem); left: -1.25rem;
+  min-width: 210px; padding: .6rem 0;
+  background: var(--paper);
+  border-top: 2px solid var(--bordo);
+  box-shadow: 0 18px 40px rgba(23, 23, 25, .08);
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
+}
+.nav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -1rem; height: 1rem; }
+.nav__item--has-sub:hover .nav__sub,
+.nav__item--has-sub:focus-within .nav__sub { opacity: 1; visibility: visible; transform: none; }
+.nav__sub a {
+  display: block; padding: .55rem 1.25rem;
+  font-size: var(--fs-sm); white-space: nowrap;
+  transition: color .2s, background .2s;
+}
+.nav__sub a:hover { color: var(--bordo); background: var(--bordo-soft); }
+.nav__sub a[aria-current="page"] { color: var(--bordo); }
 .nav__cta { padding: .8rem 1.4rem; }
 
 .burger {
@@ -238,27 +260,6 @@ p + p { margin-top: 1em; }
 .stats li { padding: 2rem 1.5rem 0 0; }
 .stats strong { display: block; font-size: 2.25rem; font-weight: 400; color: var(--bordo); line-height: 1; }
 .stats span { display: block; margin-top: .6rem; font-size: var(--fs-sm); color: var(--muted); }
-
-/* USLUGE */
-.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); }
-.service {
-  background: var(--gray); padding: 2.5rem 2rem 3rem;
-  transition: background .4s var(--ease), color .4s var(--ease);
-}
-.service:hover { background: var(--bordo); color: #fff; }
-.service:hover p, .service:hover .service__num { color: rgba(255,255,255,.75); }
-.service__num { display: block; font-size: var(--fs-sm); color: var(--bordo); margin-bottom: 3.5rem; transition: color .4s; }
-.service__title { font-size: var(--fs-h3); margin-bottom: .9rem; }
-.service p { font-size: var(--fs-sm); color: var(--muted); transition: color .4s; }
-a.service { display: flex; flex-direction: column; }
-.service__more {
-  margin-top: auto; padding-top: 2rem;
-  font-size: var(--fs-sm); font-weight: 500; color: var(--bordo);
-  transition: color .4s;
-}
-.service__more span { display: inline-block; transition: transform .3s var(--ease); }
-.service:hover .service__more { color: #fff; }
-.service:hover .service__more span { transform: translateX(4px); }
 
 /* PROJEKTI */
 .filters { display: flex; gap: .5rem; flex-wrap: wrap; }
@@ -367,6 +368,7 @@ a.service { display: flex; flex-direction: column; }
   color: #fff; margin-bottom: .4rem;
 }
 .footer a:hover { color: #fff; }
+.footer__social { display: flex; gap: 1.25rem; margin-top: .6rem; }
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,.1);
   padding-block: 1.5rem; font-size: var(--fs-xs);
@@ -381,6 +383,7 @@ a.service { display: flex; flex-direction: column; }
   padding-bottom: clamp(3.5rem, 7vw, 6rem);
 }
 .page-hero__title { font-size: var(--fs-h1); font-weight: 400; max-width: 16ch; }
+.page-hero .hero__actions { margin-top: 2.25rem; }
 .page-hero__lead {
   margin-top: 1.5rem; max-width: 52ch;
   font-size: var(--fs-lg); font-weight: 300; color: var(--muted);
@@ -391,17 +394,7 @@ a.service { display: flex; flex-direction: column; }
 .breadcrumb li + li::before { content: "/"; margin-right: .5rem; opacity: .5; }
 .breadcrumb a:hover { color: var(--bordo); }
 
-/* Usluge: naizmenični blokovi */
-.feature {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(2.5rem, 6vw, 6rem); align-items: center;
-}
-.feature + .feature { margin-top: var(--section-y); }
-.feature--reverse .feature__media { order: 2; }
-.feature__num { display: block; font-size: var(--fs-sm); color: var(--bordo); margin-bottom: 1rem; }
-.feature__title { font-size: var(--fs-h2); margin-bottom: 1.5rem; }
-.feature__content > p { color: var(--muted); max-width: 52ch; }
-
+/* Lista stavki */
 .checklist { margin-top: 2rem; border-top: 1px solid var(--line); max-width: 52ch; }
 .checklist li {
   display: flex; gap: .9rem; align-items: baseline;
@@ -414,7 +407,7 @@ a.service { display: flex; flex-direction: column; }
 }
 
 /* O nama: vrednosti */
-.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
 .value { border-top: 1px solid var(--ink); padding-top: 1.75rem; }
 .value__num { display: block; font-size: var(--fs-sm); color: var(--bordo); margin-bottom: 2rem; }
 .value h3 { font-size: var(--fs-h3); margin-bottom: .75rem; }
@@ -439,6 +432,44 @@ a.service { display: flex; flex-direction: column; }
 .notfound__code { font-size: clamp(5rem, 3rem + 10vw, 10rem); font-weight: 300; line-height: 1; color: var(--bordo); margin-bottom: 1rem; }
 .notfound__actions { margin-top: 2.5rem; }
 
+/* Lista usluga (početna, ostale usluge) */
+.service-list { border-top: 1px solid var(--line); }
+.service-row {
+  display: grid; grid-template-columns: 4rem minmax(0, 1.1fr) minmax(0, 1.6fr) 2rem;
+  align-items: center; column-gap: 1.5rem;
+  padding-block: 1.75rem; border-bottom: 1px solid var(--line);
+}
+.service-row__num { font-size: var(--fs-sm); color: var(--bordo); }
+.service-row__title {
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem); line-height: 1.1;
+  transition: color .3s var(--ease), transform .4s var(--ease);
+}
+.service-row__desc { font-size: var(--fs-sm); color: var(--muted); }
+.service-row__arrow {
+  justify-self: end; font-size: 1.4rem; color: var(--bordo); opacity: .35;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.service-row:hover .service-row__title { color: var(--bordo); transform: translateX(6px); }
+.service-list--plain .service-row { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) 2rem; }
+.service-row:hover .service-row__arrow { opacity: 1; transform: translateX(4px); }
+
+/* Kartice usluga (stranica Usluge): 2 velike + 3 manje */
+.service-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.75rem); }
+.service-card { grid-column: span 2; display: flex; flex-direction: column; }
+.service-card:nth-child(-n+2) { grid-column: span 3; }
+.service-card__media { overflow: hidden; }
+.service-card__media .img-ph { transition: transform .8s var(--ease); }
+.service-card:hover .service-card__media .img-ph { transform: scale(1.03); }
+.service-card__body { padding-top: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.service-card__num { font-size: var(--fs-sm); color: var(--bordo); margin-bottom: .6rem; }
+.service-card__title { font-size: var(--fs-h3); margin-bottom: .6rem; transition: color .3s; }
+.service-card:nth-child(-n+2) .service-card__title { font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem); }
+.service-card p { font-size: var(--fs-sm); color: var(--muted); max-width: 46ch; }
+.service-card__more { margin-top: auto; padding-top: 1.25rem; font-size: var(--fs-sm); font-weight: 500; color: var(--bordo); }
+.service-card__more span { display: inline-block; transition: transform .3s var(--ease); }
+.service-card:hover .service-card__title { color: var(--bordo); }
+.service-card:hover .service-card__more span { transform: translateX(4px); }
+
 /*  6) ANIMACIJE (scroll reveal)  */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -450,7 +481,6 @@ a.service { display: flex; flex-direction: column; }
 
 /*  7) RESPONSIVE  */
 @media (max-width: 1080px) {
-  .services { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); row-gap: 3rem; }
   .nav__list { gap: 1.5rem; }
 }
@@ -468,8 +498,18 @@ a.service { display: flex; flex-direction: column; }
     transition: opacity .35s var(--ease), visibility .35s;
   }
   .nav.is-open { opacity: 1; visibility: visible; }
+  .nav { justify-content: safe center; overflow-y: auto; padding-block: calc(var(--header-h) + 1rem) 2rem; }
   .nav__list { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .nav__item { text-align: center; }
   .nav__link { font-size: 1.6rem; }
+  .nav__sub {
+    position: static; min-width: 0; padding: .6rem 0 0;
+    background: none; border: 0; box-shadow: none;
+    opacity: 1; visibility: inherit; transform: none;
+  }
+  .nav__sub::before { display: none; }
+  .nav__sub a { padding: .3rem 0; font-size: 1.05rem; color: var(--muted); }
+  .nav__sub a:hover { background: none; }
   .logo__img,
   .header.is-scrolled .logo__img { height: 28px; }
   .logo__word,
@@ -484,10 +524,12 @@ a.service { display: flex; flex-direction: column; }
   .projects { grid-template-columns: 1fr 1fr; }
   .project--wide { grid-column: span 2; }
 
-  .feature { grid-template-columns: 1fr; }
-  .feature .feature__media,
-  .feature--reverse .feature__media { order: -1; }
-  .values { grid-template-columns: 1fr; }
+  .values { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: 1fr 1fr; }
+  .service-card,
+  .service-card:nth-child(-n+2) { grid-column: auto; }
+  .service-card:last-child { grid-column: span 2; }
+  .service-card:last-child .img-ph { aspect-ratio: 16 / 9; }
   .img-ph--wide, .map { aspect-ratio: 4 / 3; }
 
   .footer__grid { grid-template-columns: 1fr 1fr; }
@@ -495,7 +537,15 @@ a.service { display: flex; flex-direction: column; }
 }
 
 @media (max-width: 600px) {
-  .services, .steps, .projects { grid-template-columns: 1fr; }
+  .steps, .projects, .values, .service-grid { grid-template-columns: 1fr; }
+  .service-card:last-child { grid-column: auto; }
+  .service-card:last-child .img-ph { aspect-ratio: 4 / 3; }
+  .service-row { grid-template-columns: 2.5rem 1fr 1.5rem; row-gap: .4rem; }
+  .service-row__desc { grid-column: 2; grid-row: 2; }
+  .service-row__arrow { grid-column: 3; grid-row: 1; }
+  .service-list--plain .service-row { grid-template-columns: 1fr 1.5rem; }
+  .service-list--plain .service-row__desc { grid-column: 1; }
+  .service-list--plain .service-row__arrow { grid-column: 2; }
   .project--wide { grid-column: auto; }
   .project--wide .img-ph { aspect-ratio: 4 / 3; }
   .form__row { grid-template-columns: 1fr; }

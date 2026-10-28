@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projekti — Milensa | Realizovani nameštaj po meri</title>
-    <meta name="description" content="Pogledajte realizovane projekte: kuhinje, plakari, dnevni boravci i poslovni prostori izrađeni po meri u radionici Milensa." />
+    <meta name="description" content="Realizovani projekti: kuhinje, plakari, TV komode, nameštaj za kupatilo i biblioteke izrađeni po meri u radionici Milensa." />
     <link rel="canonical" href="https://www.milensa.rs/projekti.html" />
     <meta name="theme-color" content="#702B3B" />
 
-    <!-- Open Graph (prikaz linka na Viberu, Facebook-u, LinkedIn-u) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Milensa" />
     <meta property="og:locale" content="sr_RS" />
     <meta property="og:title" content="Projekti — Milensa | Realizovani nameštaj po meri" />
-    <meta property="og:description" content="Pogledajte realizovane projekte: kuhinje, plakari, dnevni boravci i poslovni prostori izrađeni po meri u radionici Milensa." />
+    <meta property="og:description" content="Realizovani projekti: kuhinje, plakari, TV komode, nameštaj za kupatilo i biblioteke izrađeni po meri u radionici Milensa." />
     <meta property="og:url" content="https://www.milensa.rs/projekti.html" />
     <meta property="og:image" content="https://www.milensa.rs/assets/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +26,7 @@
 
     <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=3" />
   </head>
   <body>
     <!-- HEADER -->
@@ -40,10 +39,19 @@
 
         <nav class="nav" id="nav" aria-label="Glavna navigacija">
           <ul class="nav__list">
-            <li><a href="o-nama.html" class="nav__link">O nama</a></li>
-            <li><a href="usluge.html" class="nav__link">Usluge</a></li>
-            <li><a href="projekti.html" class="nav__link" aria-current="page">Projekti</a></li>
-            <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+            <li class="nav__item"><a href="o-nama.html" class="nav__link">O nama</a></li>
+            <li class="nav__item nav__item--has-sub">
+              <a href="usluge.html" class="nav__link">Usluge</a>
+              <ul class="nav__sub">
+                <li><a href="usluge/kuhinje.html">Kuhinje</a></li>
+                <li><a href="usluge/plakari.html">Plakari</a></li>
+                <li><a href="usluge/tv-komode.html">TV komode</a></li>
+                <li><a href="usluge/kupatila.html">Kupatila</a></li>
+                <li><a href="usluge/biblioteke.html">Biblioteke</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="projekti.html" class="nav__link" aria-current="page">Projekti</a></li>
+            <li class="nav__item"><a href="kontakt.html" class="nav__link">Kontakt</a></li>
           </ul>
           <a href="kontakt.html" class="btn btn--primary nav__cta">Zakažite konsultacije</a>
         </nav>
@@ -85,8 +93,9 @@
             <button class="filter is-active" data-filter="all" aria-pressed="true">Sve</button>
             <button class="filter" data-filter="kuhinje" aria-pressed="false">Kuhinje</button>
             <button class="filter" data-filter="plakari" aria-pressed="false">Plakari</button>
-            <button class="filter" data-filter="boravak" aria-pressed="false">Boravak</button>
-            <button class="filter" data-filter="poslovni" aria-pressed="false">Poslovni</button>
+            <button class="filter" data-filter="tv-komode" aria-pressed="false">TV komode</button>
+            <button class="filter" data-filter="kupatila" aria-pressed="false">Kupatila</button>
+            <button class="filter" data-filter="biblioteke" aria-pressed="false">Biblioteke</button>
           </div>
 
           <!-- data-category mora odgovarati data-filter vrednosti -->
@@ -94,7 +103,7 @@
             <a href="#" class="project project--wide reveal" data-category="kuhinje">
               <div class="img-ph" data-label="Projekat 1"></div>
               <div class="project__meta">
-                <h3>Kuhinja</h3>
+                <h3>Kuhinja sa ostrvom</h3>
                 <span>Kuhinje · 2026</span>
               </div>
             </a>
@@ -105,25 +114,39 @@
                 <span>Plakari · 2026</span>
               </div>
             </a>
-            <a href="#" class="project reveal" data-category="boravak">
+            <a href="#" class="project reveal" data-category="tv-komode">
               <div class="img-ph" data-label="Projekat 3"></div>
               <div class="project__meta">
-                <h3>Polica</h3>
-                <span>Boravak · 2025</span>
+                <h3>TV zid sa panelima</h3>
+                <span>TV komode · 2026</span>
               </div>
             </a>
-            <a href="#" class="project reveal" data-category="poslovni">
+            <a href="#" class="project reveal" data-category="kupatila">
               <div class="img-ph" data-label="Projekat 4"></div>
               <div class="project__meta">
-                <h3>Kancelarija</h3>
-                <span>Poslovni · 2025</span>
+                <h3>Kupatilo u stanu</h3>
+                <span>Kupatila · 2025</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="biblioteke">
+              <div class="img-ph" data-label="Projekat 5"></div>
+              <div class="project__meta">
+                <h3>Biblioteka</h3>
+                <span>Biblioteke · 2025</span>
               </div>
             </a>
             <a href="#" class="project project--wide reveal" data-category="kuhinje">
-              <div class="img-ph" data-label="Projekat 5"></div>
+              <div class="img-ph" data-label="Projekat 6"></div>
               <div class="project__meta">
-                <h3>Stan</h3>
+                <h3>Kuhinja u kući</h3>
                 <span>Kuhinje · 2025</span>
+              </div>
+            </a>
+            <a href="#" class="project reveal" data-category="plakari">
+              <div class="img-ph" data-label="Projekat 7"></div>
+              <div class="project__meta">
+                <h3>Walk-in garderober</h3>
+                <span>Plakari · 2025</span>
               </div>
             </a>
           </div>
@@ -157,16 +180,23 @@
           <a href="projekti.html">Projekti</a>
           <a href="kontakt.html">Kontakt</a>
         </nav>
+        <nav class="footer__col" aria-label="Usluge">
+          <h2 class="footer__title">Usluge</h2>
+          <a href="usluge/kuhinje.html">Kuhinje</a>
+          <a href="usluge/plakari.html">Plakari</a>
+          <a href="usluge/tv-komode.html">TV komode</a>
+          <a href="usluge/kupatila.html">Kupatila</a>
+          <a href="usluge/biblioteke.html">Biblioteke</a>
+        </nav>
         <div class="footer__col">
           <h2 class="footer__title">Kontakt</h2>
           <a href="tel:+381000000000">+381 00 000 0000</a>
           <a href="mailto:info@milensa.rs">info@milensa.rs</a>
           <span>Ulica i broj, Grad</span>
-        </div>
-        <div class="footer__col">
-          <h2 class="footer__title">Pratite nas</h2>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+          <span class="footer__social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </span>
         </div>
       </div>
       <div class="container footer__bottom">
@@ -174,6 +204,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=3"></script>
   </body>
 </html>

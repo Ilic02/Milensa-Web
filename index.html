@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Milensa — Nameštaj po meri | Kuhinje, plakari, enterijeri</title>
-    <meta name="description" content="Milensa — dizajn i izrada nameštaja po meri. Kuhinje, plakari, dnevni boravci i poslovni enterijeri, od projekta do montaže." />
+    <title>Milensa — Nameštaj po meri | Kuhinje, plakari, TV komode, biblioteke</title>
+    <meta name="description" content="Milensa — izrada nameštaja po meri: kuhinje, plakari, TV komode, nameštaj za kupatilo i biblioteke. Od projekta do montaže." />
     <link rel="canonical" href="https://www.milensa.rs/" />
     <meta name="theme-color" content="#702B3B" />
 
-    <!-- Open Graph (prikaz linka na Viberu, Facebook-u, LinkedIn-u) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Milensa" />
     <meta property="og:locale" content="sr_RS" />
-    <meta property="og:title" content="Milensa — Nameštaj po meri | Kuhinje, plakari, enterijeri" />
-    <meta property="og:description" content="Milensa — dizajn i izrada nameštaja po meri. Kuhinje, plakari, dnevni boravci i poslovni enterijeri, od projekta do montaže." />
+    <meta property="og:title" content="Milensa — Nameštaj po meri | Kuhinje, plakari, TV komode, biblioteke" />
+    <meta property="og:description" content="Milensa — izrada nameštaja po meri: kuhinje, plakari, TV komode, nameštaj za kupatilo i biblioteke. Od projekta do montaže." />
     <meta property="og:url" content="https://www.milensa.rs/" />
     <meta property="og:image" content="https://www.milensa.rs/assets/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,8 +26,7 @@
 
     <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Strukturirani podaci za Google (proveriti i popuniti prave podatke) -->
+    <link rel="stylesheet" href="css/style.css?v=3" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -61,10 +59,19 @@
 
         <nav class="nav" id="nav" aria-label="Glavna navigacija">
           <ul class="nav__list">
-            <li><a href="o-nama.html" class="nav__link">O nama</a></li>
-            <li><a href="usluge.html" class="nav__link">Usluge</a></li>
-            <li><a href="projekti.html" class="nav__link">Projekti</a></li>
-            <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+            <li class="nav__item"><a href="o-nama.html" class="nav__link">O nama</a></li>
+            <li class="nav__item nav__item--has-sub">
+              <a href="usluge.html" class="nav__link">Usluge</a>
+              <ul class="nav__sub">
+                <li><a href="usluge/kuhinje.html">Kuhinje</a></li>
+                <li><a href="usluge/plakari.html">Plakari</a></li>
+                <li><a href="usluge/tv-komode.html">TV komode</a></li>
+                <li><a href="usluge/kupatila.html">Kupatila</a></li>
+                <li><a href="usluge/biblioteke.html">Biblioteke</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="projekti.html" class="nav__link">Projekti</a></li>
+            <li class="nav__item"><a href="kontakt.html" class="nav__link">Kontakt</a></li>
           </ul>
           <a href="kontakt.html" class="btn btn--primary nav__cta">Zakažite konsultacije</a>
         </nav>
@@ -89,8 +96,8 @@
             <p class="eyebrow">Nameštaj po meri · od 20XX.</p>
             <h1 class="hero__title">Nameštaj koji je<br />napravljen za vaš prostor.</h1>
             <p class="hero__lead">
-              Projektujemo i izrađujemo kuhinje, plakare i kompletne enterijere,
-              precizno, od prvog skeča do montaže.
+              Projektujemo i izrađujemo kuhinje, plakare, TV komode, nameštaj za kupatilo
+              i biblioteke, precizno, od prvog skeča do montaže.
             </p>
             <div class="hero__actions">
               <a href="kontakt.html" class="btn btn--primary">Zakažite konsultacije</a>
@@ -132,7 +139,7 @@
         </div>
       </section>
 
-      <!-- USLUGE (pregled) -->
+      <!-- USLUGE (lista) -->
       <section class="section section--tinted">
         <div class="container">
           <header class="section__head section__head--row reveal">
@@ -142,33 +149,48 @@
             </div>
             <a href="usluge.html" class="link-arrow link-arrow--flush">Sve usluge <span aria-hidden="true">→</span></a>
           </header>
-
-          <div class="services">
-            <a href="usluge.html#kuhinje" class="service reveal">
-              <span class="service__num">01</span>
-              <h3 class="service__title">Kuhinje</h3>
-              <p>Funkcionalne kuhinje po meri, od izbora fronta i radne ploče do ugradnje aparata.</p>
-              <span class="service__more">Saznajte više <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="usluge.html#plakari" class="service reveal">
-              <span class="service__num">02</span>
-              <h3 class="service__title">Plakari i garderoberi</h3>
-              <p>Ugradni plakari i walk-in garderoberi koji koriste svaki centimetar prostora.</p>
-              <span class="service__more">Saznajte više <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="usluge.html#boravak" class="service reveal">
-              <span class="service__num">03</span>
-              <h3 class="service__title">Dnevni boravak</h3>
-              <p>TV zidovi, police, komode i stolovi usklađeni sa ostatkom enterijera.</p>
-              <span class="service__more">Saznajte više <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="usluge.html#poslovni" class="service reveal">
-              <span class="service__num">04</span>
-              <h3 class="service__title">Poslovni prostori</h3>
-              <p>Kancelarije, recepcije i ugostiteljski objekti, kompletno opremanje po projektu.</p>
-              <span class="service__more">Saznajte više <span aria-hidden="true">→</span></span>
-            </a>
-          </div>
+          <ul class="service-list reveal">
+            <li>
+              <a href="usluge/kuhinje.html" class="service-row">
+                <span class="service-row__num">01</span>
+                <span class="service-row__title">Kuhinje</span>
+                <span class="service-row__desc">Funkcionalne kuhinje projektovane oko načina na koji kuvate i živite.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="usluge/plakari.html" class="service-row">
+                <span class="service-row__num">02</span>
+                <span class="service-row__title">Plakari</span>
+                <span class="service-row__desc">Ugradni plakari i garderoberi koji koriste svaki centimetar.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="usluge/tv-komode.html" class="service-row">
+                <span class="service-row__num">03</span>
+                <span class="service-row__title">TV komode</span>
+                <span class="service-row__desc">TV komode i zidovi koji skrivaju kablove i uređaje.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="usluge/kupatila.html" class="service-row">
+                <span class="service-row__num">04</span>
+                <span class="service-row__title">Kupatila</span>
+                <span class="service-row__desc">Ormarići i elementi za kupatilo i toalet, otporni na vlagu.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="usluge/biblioteke.html" class="service-row">
+                <span class="service-row__num">05</span>
+                <span class="service-row__title">Biblioteke</span>
+                <span class="service-row__desc">Biblioteke i police od zida do zida.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -187,7 +209,7 @@
             <a href="#" class="project project--wide reveal" data-category="kuhinje">
               <div class="img-ph" data-label="Projekat 1"></div>
               <div class="project__meta">
-                <h3>Kuhinja</h3>
+                <h3>Kuhinja sa ostrvom</h3>
                 <span>Kuhinje · 2026</span>
               </div>
             </a>
@@ -198,18 +220,18 @@
                 <span>Plakari · 2026</span>
               </div>
             </a>
-            <a href="#" class="project reveal" data-category="boravak">
+            <a href="#" class="project reveal" data-category="tv-komode">
               <div class="img-ph" data-label="Projekat 3"></div>
               <div class="project__meta">
-                <h3>Polica</h3>
-                <span>Boravak · 2025</span>
+                <h3>TV zid sa panelima</h3>
+                <span>TV komode · 2025</span>
               </div>
             </a>
-            <a href="#" class="project project--wide reveal" data-category="kuhinje">
-              <div class="img-ph" data-label="Projekat 5"></div>
+            <a href="#" class="project project--wide reveal" data-category="biblioteke">
+              <div class="img-ph" data-label="Projekat 4"></div>
               <div class="project__meta">
-                <h3>Stan</h3>
-                <span>Kuhinje · 2025</span>
+                <h3>Biblioteka</h3>
+                <span>Biblioteke · 2025</span>
               </div>
             </a>
           </div>
@@ -255,16 +277,23 @@
           <a href="projekti.html">Projekti</a>
           <a href="kontakt.html">Kontakt</a>
         </nav>
+        <nav class="footer__col" aria-label="Usluge">
+          <h2 class="footer__title">Usluge</h2>
+          <a href="usluge/kuhinje.html">Kuhinje</a>
+          <a href="usluge/plakari.html">Plakari</a>
+          <a href="usluge/tv-komode.html">TV komode</a>
+          <a href="usluge/kupatila.html">Kupatila</a>
+          <a href="usluge/biblioteke.html">Biblioteke</a>
+        </nav>
         <div class="footer__col">
           <h2 class="footer__title">Kontakt</h2>
           <a href="tel:+381000000000">+381 00 000 0000</a>
           <a href="mailto:info@milensa.rs">info@milensa.rs</a>
           <span>Ulica i broj, Grad</span>
-        </div>
-        <div class="footer__col">
-          <h2 class="footer__title">Pratite nas</h2>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+          <span class="footer__social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </span>
         </div>
       </div>
       <div class="container footer__bottom">
@@ -272,6 +301,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=3"></script>
   </body>
 </html>
