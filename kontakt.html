@@ -26,7 +26,7 @@
 
     <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="css/style.css?v=3" />
+    <link rel="stylesheet" href="css/style.css?v=6" />
   </head>
   <body>
     <!-- HEADER -->
@@ -48,6 +48,8 @@
                 <li><a href="usluge/tv-komode.html">TV komode</a></li>
                 <li><a href="usluge/kupatila.html">Kupatila</a></li>
                 <li><a href="usluge/biblioteke.html">Biblioteke</a></li>
+                <li><a href="usluge/komode.html">Komode</a></li>
+                <li><a href="usluge/kreveti.html">Kreveti</a></li>
               </ul>
             </li>
             <li class="nav__item"><a href="projekti.html" class="nav__link">Projekti</a></li>
@@ -91,14 +93,17 @@
         <div class="container split split--top">
           <div class="split__content reveal">
             <ul class="contact-list contact-list--flush">
-              <li><span>Telefon</span><a href="tel:+381000000000">+381 00 000 0000</a></li>
-              <li><span>Email</span><a href="mailto:info@milensa.rs">info@milensa.rs</a></li>
-              <li><span>Adresa</span>Ulica i broj, Grad</li>
-              <li><span>Radno vreme</span>Pon–Pet 08–17h · Sub 09–14h</li>
+              <li><span>Telefon</span><a href="tel:+381631983744">063 198 3744</a></li>
+              <li><span>Email</span><a href="mailto:milensa.namestaj@gmail.com">milensa.namestaj@gmail.com</a></li>
+              <li><span>Lokacija</span>Beograd, Srbija</li>
+              <li><span>Radno vreme</span>Pon–Pet 09–17h</li>
+              <li><span>Instagram</span><a href="https://www.instagram.com/milensa_proizvodnja_namestaja/" target="_blank" rel="noopener">@milensa_proizvodnja_namestaja</a></li>
             </ul>
           </div>
 
+          <!-- Forma šalje upit na milensa.namestaj@gmail.com preko FormSubmit-a (js/main.js) -->
           <form class="form reveal" id="contact-form" novalidate>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none" />
             <div class="form__row">
               <label class="field">
                 <span>Ime i prezime *</span>
@@ -122,6 +127,8 @@
                 <option>TV komoda</option>
                 <option>Kupatilo / toalet</option>
                 <option>Biblioteka</option>
+                <option>Komoda</option>
+                <option>Krevet</option>
                 <option>Drugo</option>
               </select>
             </label>
@@ -135,11 +142,17 @@
         </div>
       </section>
 
-      <!-- MAPA: zameniti placeholder Google Maps iframe-om:
-           <div class="map reveal"><iframe src="..." loading="lazy" title="Lokacija radionice"></iframe></div> -->
+      <!-- MAPA -->
       <section class="section section--flush-top">
         <div class="container">
-          <div class="map img-ph reveal" data-label="Mapa"></div>
+          <div class="map reveal">
+            <iframe
+              src="https://maps.google.com/maps?q=Beograd,%20Srbija&amp;z=11&amp;hl=sr&amp;output=embed"
+              title="Mapa: Beograd, Srbija"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
@@ -168,15 +181,16 @@
           <a href="usluge/tv-komode.html">TV komode</a>
           <a href="usluge/kupatila.html">Kupatila</a>
           <a href="usluge/biblioteke.html">Biblioteke</a>
+          <a href="usluge/komode.html">Komode</a>
+          <a href="usluge/kreveti.html">Kreveti</a>
         </nav>
         <div class="footer__col">
           <h2 class="footer__title">Kontakt</h2>
-          <a href="tel:+381000000000">+381 00 000 0000</a>
-          <a href="mailto:info@milensa.rs">info@milensa.rs</a>
-          <span>Ulica i broj, Grad</span>
+          <a href="tel:+381631983744">063 198 3744</a>
+          <a href="mailto:milensa.namestaj@gmail.com">milensa.namestaj@gmail.com</a>
+          <span>Beograd, Srbija</span>
           <span class="footer__social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+            <a href="https://www.instagram.com/milensa_proizvodnja_namestaja/" target="_blank" rel="noopener">Instagram</a>
           </span>
         </div>
       </div>
@@ -185,6 +199,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=6"></script>
   </body>
 </html>

@@ -26,7 +26,7 @@
 
     <link rel="alternate icon" type="image/png" href="assets/milensa_logo.png" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="css/style.css?v=3" />
+    <link rel="stylesheet" href="css/style.css?v=6" />
   </head>
   <body>
     <!-- HEADER -->
@@ -48,6 +48,8 @@
                 <li><a href="usluge/tv-komode.html">TV komode</a></li>
                 <li><a href="usluge/kupatila.html">Kupatila</a></li>
                 <li><a href="usluge/biblioteke.html">Biblioteke</a></li>
+                <li><a href="usluge/komode.html">Komode</a></li>
+                <li><a href="usluge/kreveti.html">Kreveti</a></li>
               </ul>
             </li>
             <li class="nav__item"><a href="projekti.html" class="nav__link">Projekti</a></li>
@@ -81,7 +83,7 @@
           <div class="reveal">
             <p class="eyebrow">O nama</p>
             <h1 class="page-hero__title">Porodična radionica nameštaja po meri.</h1>
-            <p class="page-hero__lead">Više od 15 godina projektujemo i izrađujemo nameštaj koji je napravljen tačno za prostor u kome stoji.</p>
+            <p class="page-hero__lead">Već 24 godine projektujemo i izrađujemo nameštaj koji je napravljen tačno za prostor u kome stoji.</p>
           </div>
         </div>
       </section>
@@ -89,8 +91,8 @@
       <!-- PRIČA -->
       <section class="section section--flush-top">
         <div class="container split">
-          <div class="split__media reveal">
-            <div class="img-ph img-ph--square" data-label="Osnivači / tim"></div>
+          <div class="split__media media media--square reveal">
+            <img src="assets/img/kupatila/kupatila-06-md.webp" srcset="assets/img/kupatila/kupatila-06-sm.webp 800w, assets/img/kupatila/kupatila-06-md.webp 1400w, assets/img/kupatila/kupatila-06-lg.webp 2400w" sizes="(max-width: 900px) 100vw, 560px" width="1400" height="1400" alt="Nameštaj za kupatilo po meri, Milensa — fotografija 6" loading="lazy" decoding="async" />
           </div>
           <div class="split__content reveal">
             <p class="eyebrow">Naša priča</p>
@@ -108,10 +110,9 @@
         </div>
         <div class="container">
           <ul class="stats reveal">
-            <li><strong>15+</strong><span>godina iskustva</span></li>
-            <li><strong>800+</strong><span>realizovanih projekata</span></li>
-            <li><strong>100%</strong><span>izrada u našoj radionici</span></li>
-            <li><strong>5 god.</strong><span>garancije</span></li>
+            <li><strong data-count="24">24</strong><span>godine iskustva</span></li>
+            <li><strong data-count="800" data-suffix="+">800+</strong><span>realizovanih projekata</span></li>
+            <li><strong data-count="100" data-suffix="%">100%</strong><span>izrada u našoj radionici</span></li>
           </ul>
         </div>
       </section>
@@ -125,17 +126,14 @@
           </header>
           <div class="values">
             <article class="value reveal">
-              <span class="value__num">01</span>
               <h3>Preciznost</h3>
               <p>Merimo na licu mesta i projektujemo do milimetra, da bi sve leglo bez improvizacije pri montaži.</p>
             </article>
             <article class="value reveal">
-              <span class="value__num">02</span>
               <h3>Kvalitetni materijali</h3>
               <p>Radimo sa proverenim dobavljačima ploča, okova i radnih površina koji traju.</p>
             </article>
             <article class="value reveal">
-              <span class="value__num">03</span>
               <h3>Poštovanje rokova</h3>
               <p>Dogovoreni rok je obaveza. O svakoj fazi izrade ste blagovremeno obavešteni.</p>
             </article>
@@ -143,14 +141,24 @@
         </div>
       </section>
 
-      <!-- RADIONICA -->
+      <!-- DETALJI -->
       <section class="section">
         <div class="container">
           <header class="section__head reveal">
-            <p class="eyebrow">Radionica</p>
-            <h2 class="section__title">Sve nastaje pod jednim krovom</h2>
+            <p class="eyebrow">Detalji</p>
+            <h2 class="section__title">Kvalitet se vidi u detaljima</h2>
           </header>
-          <div class="img-ph img-ph--wide reveal" data-label="Fotografija radionice"></div>
+          <div class="trio">
+            <div class="media media--square reveal">
+              <img src="assets/img/kuhinje/kuhinje-24-md.webp" srcset="assets/img/kuhinje/kuhinje-24-sm.webp 800w, assets/img/kuhinje/kuhinje-24-md.webp 1400w, assets/img/kuhinje/kuhinje-24-lg.webp 2400w" sizes="(max-width: 900px) 100vw, 400px" width="1400" height="1050" alt="Kuhinja po meri, Milensa — fotografija 24" loading="lazy" decoding="async" />
+            </div>
+            <div class="media media--square reveal">
+              <img src="assets/img/ostalo/ostalo-07-md.webp" srcset="assets/img/ostalo/ostalo-07-sm.webp 800w, assets/img/ostalo/ostalo-07-md.webp 1400w, assets/img/ostalo/ostalo-07-lg.webp 1600w" sizes="(max-width: 900px) 100vw, 400px" width="1400" height="1400" alt="Nameštaj po meri, Milensa — fotografija 7" loading="lazy" decoding="async" />
+            </div>
+            <div class="media media--square reveal">
+              <img src="assets/img/kuhinje/kuhinje-45-md.webp" srcset="assets/img/kuhinje/kuhinje-45-sm.webp 800w, assets/img/kuhinje/kuhinje-45-md.webp 1400w, assets/img/kuhinje/kuhinje-45-lg.webp 1800w" sizes="(max-width: 900px) 100vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 45" loading="lazy" decoding="async" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -187,15 +195,16 @@
           <a href="usluge/tv-komode.html">TV komode</a>
           <a href="usluge/kupatila.html">Kupatila</a>
           <a href="usluge/biblioteke.html">Biblioteke</a>
+          <a href="usluge/komode.html">Komode</a>
+          <a href="usluge/kreveti.html">Kreveti</a>
         </nav>
         <div class="footer__col">
           <h2 class="footer__title">Kontakt</h2>
-          <a href="tel:+381000000000">+381 00 000 0000</a>
-          <a href="mailto:info@milensa.rs">info@milensa.rs</a>
-          <span>Ulica i broj, Grad</span>
+          <a href="tel:+381631983744">063 198 3744</a>
+          <a href="mailto:milensa.namestaj@gmail.com">milensa.namestaj@gmail.com</a>
+          <span>Beograd, Srbija</span>
           <span class="footer__social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+            <a href="https://www.instagram.com/milensa_proizvodnja_namestaja/" target="_blank" rel="noopener">Instagram</a>
           </span>
         </div>
       </div>
@@ -204,6 +213,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=6"></script>
   </body>
 </html>

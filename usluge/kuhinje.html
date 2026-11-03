@@ -26,7 +26,7 @@
 
     <link rel="alternate icon" type="image/png" href="../assets/milensa_logo.png" />
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-    <link rel="stylesheet" href="../css/style.css?v=3" />
+    <link rel="stylesheet" href="../css/style.css?v=6" />
   </head>
   <body>
     <!-- HEADER -->
@@ -48,6 +48,8 @@
                 <li><a href="../usluge/tv-komode.html">TV komode</a></li>
                 <li><a href="../usluge/kupatila.html">Kupatila</a></li>
                 <li><a href="../usluge/biblioteke.html">Biblioteke</a></li>
+                <li><a href="../usluge/komode.html">Komode</a></li>
+                <li><a href="../usluge/kreveti.html">Kreveti</a></li>
               </ul>
             </li>
             <li class="nav__item"><a href="../projekti.html" class="nav__link">Projekti</a></li>
@@ -70,36 +72,38 @@
 
     <main>
       <!-- PAGE HERO -->
-      <section class="page-hero">
-        <div class="container">
-          <nav class="breadcrumb reveal" aria-label="Putanja">
-            <ol>
+      <section class="page-hero page-hero--split">
+        <div class="container page-hero__grid">
+          <div class="page-hero__content">
+            <nav class="breadcrumb reveal" aria-label="Putanja">
+              <ol>
               <li><a href="../index.html">Početna</a></li>
               <li><a href="../usluge.html">Usluge</a></li>
               <li aria-current="page">Kuhinje</li>
-            </ol>
-          </nav>
-          <div class="reveal">
-            <h1 class="page-hero__title">Kuhinje po meri.</h1>
-            <p class="page-hero__lead">Projektujemo i izrađujemo kuhinje po meri, od prvog merenja i 3D projekta do ugradnje aparata i rasvete.</p>
-            <div class="hero__actions">
-              <a href="../kontakt.html" class="btn btn--primary">Zakažite konsultacije</a>
-              <a href="../projekti.html?kategorija=kuhinje" class="btn btn--ghost">Pogledajte projekte</a>
+              </ol>
+            </nav>
+            <div class="reveal">
+              <p class="eyebrow">Usluge</p>
+              <h1 class="page-hero__title">Kuhinje po meri.</h1>
+              <p class="page-hero__lead">Projektujemo i izrađujemo kuhinje po meri, od prvog merenja i 3D projekta do ugradnje aparata i rasvete.</p>
+              <div class="hero__actions">
+                <a href="../kontakt.html" class="btn btn--primary">Zakažite konsultacije</a>
+                <a href="#galerija" class="btn btn--ghost">Pogledajte radove</a>
+              </div>
             </div>
+          </div>
+          <div class="page-hero__media media media--tall reveal">
+            <img src="../assets/img/kuhinje/kuhinje-01-md.webp" srcset="../assets/img/kuhinje/kuhinje-01-sm.webp 800w, ../assets/img/kuhinje/kuhinje-01-md.webp 1400w, ../assets/img/kuhinje/kuhinje-01-lg.webp 1800w" sizes="(max-width: 900px) 100vw, 520px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 1" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </section>
 
-      <!-- GLAVNA FOTOGRAFIJA -->
-      <section class="section section--flush-top">
-        <div class="container">
-          <div class="img-ph img-ph--wide reveal" data-label="Kuhinje — glavna fotografija"></div>
-        </div>
-      </section>
-
       <!-- ŠTA DOBIJATE -->
-      <section class="section section--flush-top">
+      <section class="section section--tinted">
         <div class="container split">
+          <div class="split__media media media--tall reveal">
+            <img src="../assets/img/kuhinje/kuhinje-02-md.webp" srcset="../assets/img/kuhinje/kuhinje-02-sm.webp 800w, ../assets/img/kuhinje/kuhinje-02-md.webp 1400w, ../assets/img/kuhinje/kuhinje-02-lg.webp 1800w" sizes="(max-width: 900px) 100vw, 560px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 2" loading="lazy" decoding="async" />
+          </div>
           <div class="split__content reveal">
             <p class="eyebrow">Šta dobijate</p>
             <h2 class="section__title">Kuhinja koja prati vaš ritam.</h2>
@@ -111,14 +115,11 @@
                 <li>Montaža i završno podešavanje</li>
             </ul>
           </div>
-          <div class="split__media reveal">
-            <div class="img-ph img-ph--square" data-label="Detalj"></div>
-          </div>
         </div>
       </section>
 
       <!-- MATERIJALI I OPCIJE -->
-      <section class="section section--tinted">
+      <section class="section">
         <div class="container">
           <header class="section__head reveal">
             <p class="eyebrow">Materijali i opcije</p>
@@ -126,22 +127,18 @@
           </header>
           <div class="values">
             <article class="value reveal">
-              <span class="value__num">01</span>
               <h3>Frontovi</h3>
               <p>Mat i sjajni lakovi, furnir, iverica i MDF u izabranoj boji.</p>
             </article>
             <article class="value reveal">
-              <span class="value__num">02</span>
               <h3>Radne ploče</h3>
               <p>Kompakt ploče, kvarc, keramika i masivno drvo.</p>
             </article>
             <article class="value reveal">
-              <span class="value__num">03</span>
               <h3>Okovi</h3>
               <p>Sistemi sa usporenim zatvaranjem i unutrašnja organizacija fioka.</p>
             </article>
             <article class="value reveal">
-              <span class="value__num">04</span>
               <h3>Rasveta</h3>
               <p>LED trake ispod elemenata, u vitrinama i nišama.</p>
             </article>
@@ -149,37 +146,163 @@
         </div>
       </section>
 
-      <!-- PROJEKTI IZ OVE KATEGORIJE -->
-      <section class="section">
+      <!-- GALERIJA -->
+      <section class="section section--flush-top" id="galerija">
         <div class="container">
           <header class="section__head section__head--row reveal">
             <div>
-              <p class="eyebrow">Projekti</p>
+              <p class="eyebrow">Galerija · 49 fotografija</p>
               <h2 class="section__title">Naši radovi</h2>
             </div>
             <a href="../projekti.html?kategorija=kuhinje" class="link-arrow link-arrow--flush">Svi projekti <span aria-hidden="true">→</span></a>
           </header>
-          <div class="projects">
-            <a href="#" class="project reveal" data-category="kuhinje">
-              <div class="img-ph" data-label="Kuhinje 1"></div>
-              <div class="project__meta">
-                <h3>Kuhinja sa ostrvom</h3>
-                <span>Kuhinje · 2026</span>
-              </div>
+          <div class="gallery" data-gallery data-limit="12">
+            <a href="../assets/img/kuhinje/kuhinje-01-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-01-md.webp" srcset="../assets/img/kuhinje/kuhinje-01-sm.webp 800w, ../assets/img/kuhinje/kuhinje-01-md.webp 1400w, ../assets/img/kuhinje/kuhinje-01-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 1" loading="lazy" decoding="async" />
             </a>
-            <a href="#" class="project reveal" data-category="kuhinje">
-              <div class="img-ph" data-label="Kuhinje 2"></div>
-              <div class="project__meta">
-                <h3>Kuhinja u stanu</h3>
-                <span>Kuhinje · 2026</span>
-              </div>
+            <a href="../assets/img/kuhinje/kuhinje-02-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-02-md.webp" srcset="../assets/img/kuhinje/kuhinje-02-sm.webp 800w, ../assets/img/kuhinje/kuhinje-02-md.webp 1400w, ../assets/img/kuhinje/kuhinje-02-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 2" loading="lazy" decoding="async" />
             </a>
-            <a href="#" class="project reveal" data-category="kuhinje">
-              <div class="img-ph" data-label="Kuhinje 3"></div>
-              <div class="project__meta">
-                <h3>Kuhinja u kući</h3>
-                <span>Kuhinje · 2026</span>
-              </div>
+            <a href="../assets/img/kuhinje/kuhinje-03-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-03-md.webp" srcset="../assets/img/kuhinje/kuhinje-03-sm.webp 800w, ../assets/img/kuhinje/kuhinje-03-md.webp 1400w, ../assets/img/kuhinje/kuhinje-03-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 3" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-04-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-04-md.webp" srcset="../assets/img/kuhinje/kuhinje-04-sm.webp 800w, ../assets/img/kuhinje/kuhinje-04-md.webp 1400w, ../assets/img/kuhinje/kuhinje-04-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 4" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-05-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-05-md.webp" srcset="../assets/img/kuhinje/kuhinje-05-sm.webp 800w, ../assets/img/kuhinje/kuhinje-05-md.webp 1400w, ../assets/img/kuhinje/kuhinje-05-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 5" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-06-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-06-md.webp" srcset="../assets/img/kuhinje/kuhinje-06-sm.webp 800w, ../assets/img/kuhinje/kuhinje-06-md.webp 1400w, ../assets/img/kuhinje/kuhinje-06-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 6" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-07-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-07-md.webp" srcset="../assets/img/kuhinje/kuhinje-07-sm.webp 800w, ../assets/img/kuhinje/kuhinje-07-md.webp 1400w, ../assets/img/kuhinje/kuhinje-07-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 7" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-08-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-08-md.webp" srcset="../assets/img/kuhinje/kuhinje-08-sm.webp 800w, ../assets/img/kuhinje/kuhinje-08-md.webp 1400w, ../assets/img/kuhinje/kuhinje-08-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 8" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-09-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-09-md.webp" srcset="../assets/img/kuhinje/kuhinje-09-sm.webp 800w, ../assets/img/kuhinje/kuhinje-09-md.webp 1400w, ../assets/img/kuhinje/kuhinje-09-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 9" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-10-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-10-md.webp" srcset="../assets/img/kuhinje/kuhinje-10-sm.webp 800w, ../assets/img/kuhinje/kuhinje-10-md.webp 1400w, ../assets/img/kuhinje/kuhinje-10-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 10" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-11-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-11-md.webp" srcset="../assets/img/kuhinje/kuhinje-11-sm.webp 800w, ../assets/img/kuhinje/kuhinje-11-md.webp 1400w, ../assets/img/kuhinje/kuhinje-11-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 11" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-12-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-12-md.webp" srcset="../assets/img/kuhinje/kuhinje-12-sm.webp 800w, ../assets/img/kuhinje/kuhinje-12-md.webp 1400w, ../assets/img/kuhinje/kuhinje-12-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 12" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-13-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-13-md.webp" srcset="../assets/img/kuhinje/kuhinje-13-sm.webp 800w, ../assets/img/kuhinje/kuhinje-13-md.webp 1400w, ../assets/img/kuhinje/kuhinje-13-lg.webp 2400w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1050" alt="Kuhinja po meri, Milensa — fotografija 13" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-14-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-14-md.webp" srcset="../assets/img/kuhinje/kuhinje-14-sm.webp 800w, ../assets/img/kuhinje/kuhinje-14-md.webp 1400w, ../assets/img/kuhinje/kuhinje-14-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1866" alt="Kuhinja po meri, Milensa — fotografija 14" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-15-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-15-md.webp" srcset="../assets/img/kuhinje/kuhinje-15-sm.webp 800w, ../assets/img/kuhinje/kuhinje-15-md.webp 1400w, ../assets/img/kuhinje/kuhinje-15-lg.webp 2320w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1400" alt="Kuhinja po meri, Milensa — fotografija 15" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-16-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-16-md.webp" srcset="../assets/img/kuhinje/kuhinje-16-sm.webp 800w, ../assets/img/kuhinje/kuhinje-16-md.webp 1086w, ../assets/img/kuhinje/kuhinje-16-lg.webp 1086w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1086" height="1448" alt="Kuhinja po meri, Milensa — fotografija 16" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-17-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-17-md.webp" srcset="../assets/img/kuhinje/kuhinje-17-sm.webp 800w, ../assets/img/kuhinje/kuhinje-17-md.webp 1136w, ../assets/img/kuhinje/kuhinje-17-lg.webp 1136w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1136" height="938" alt="Kuhinja po meri, Milensa — fotografija 17" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-18-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-18-md.webp" srcset="../assets/img/kuhinje/kuhinje-18-sm.webp 800w, ../assets/img/kuhinje/kuhinje-18-md.webp 1195w, ../assets/img/kuhinje/kuhinje-18-lg.webp 1195w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1195" height="896" alt="Kuhinja po meri, Milensa — fotografija 18" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-19-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-19-md.webp" srcset="../assets/img/kuhinje/kuhinje-19-sm.webp 800w, ../assets/img/kuhinje/kuhinje-19-md.webp 1206w, ../assets/img/kuhinje/kuhinje-19-lg.webp 1206w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1206" height="1493" alt="Kuhinja po meri, Milensa — fotografija 19" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-20-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-20-md.webp" srcset="../assets/img/kuhinje/kuhinje-20-sm.webp 800w, ../assets/img/kuhinje/kuhinje-20-md.webp 1400w, ../assets/img/kuhinje/kuhinje-20-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 20" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-21-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-21-md.webp" srcset="../assets/img/kuhinje/kuhinje-21-sm.webp 800w, ../assets/img/kuhinje/kuhinje-21-md.webp 1400w, ../assets/img/kuhinje/kuhinje-21-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 21" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-22-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-22-md.webp" srcset="../assets/img/kuhinje/kuhinje-22-sm.webp 800w, ../assets/img/kuhinje/kuhinje-22-md.webp 1400w, ../assets/img/kuhinje/kuhinje-22-lg.webp 1133w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="2965" alt="Kuhinja po meri, Milensa — fotografija 22" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-23-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-23-md.webp" srcset="../assets/img/kuhinje/kuhinje-23-sm.webp 800w, ../assets/img/kuhinje/kuhinje-23-md.webp 1400w, ../assets/img/kuhinje/kuhinje-23-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 23" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-24-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-24-md.webp" srcset="../assets/img/kuhinje/kuhinje-24-sm.webp 800w, ../assets/img/kuhinje/kuhinje-24-md.webp 1400w, ../assets/img/kuhinje/kuhinje-24-lg.webp 2400w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1050" alt="Kuhinja po meri, Milensa — fotografija 24" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-25-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-25-md.webp" srcset="../assets/img/kuhinje/kuhinje-25-sm.webp 800w, ../assets/img/kuhinje/kuhinje-25-md.webp 1400w, ../assets/img/kuhinje/kuhinje-25-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1866" alt="Kuhinja po meri, Milensa — fotografija 25" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-26-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-26-md.webp" srcset="../assets/img/kuhinje/kuhinje-26-sm.webp 800w, ../assets/img/kuhinje/kuhinje-26-md.webp 1400w, ../assets/img/kuhinje/kuhinje-26-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 26" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-27-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-27-md.webp" srcset="../assets/img/kuhinje/kuhinje-27-sm.webp 800w, ../assets/img/kuhinje/kuhinje-27-md.webp 1400w, ../assets/img/kuhinje/kuhinje-27-lg.webp 1799w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 27" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-28-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-28-md.webp" srcset="../assets/img/kuhinje/kuhinje-28-sm.webp 800w, ../assets/img/kuhinje/kuhinje-28-md.webp 1400w, ../assets/img/kuhinje/kuhinje-28-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 28" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-29-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-29-md.webp" srcset="../assets/img/kuhinje/kuhinje-29-sm.webp 800w, ../assets/img/kuhinje/kuhinje-29-md.webp 1400w, ../assets/img/kuhinje/kuhinje-29-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 29" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-30-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-30-md.webp" srcset="../assets/img/kuhinje/kuhinje-30-sm.webp 800w, ../assets/img/kuhinje/kuhinje-30-md.webp 1400w, ../assets/img/kuhinje/kuhinje-30-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 30" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-31-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-31-md.webp" srcset="../assets/img/kuhinje/kuhinje-31-sm.webp 800w, ../assets/img/kuhinje/kuhinje-31-md.webp 1400w, ../assets/img/kuhinje/kuhinje-31-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1866" alt="Kuhinja po meri, Milensa — fotografija 31" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-32-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-32-md.webp" srcset="../assets/img/kuhinje/kuhinje-32-sm.webp 800w, ../assets/img/kuhinje/kuhinje-32-md.webp 1400w, ../assets/img/kuhinje/kuhinje-32-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 32" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-33-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-33-md.webp" srcset="../assets/img/kuhinje/kuhinje-33-sm.webp 800w, ../assets/img/kuhinje/kuhinje-33-md.webp 1400w, ../assets/img/kuhinje/kuhinje-33-lg.webp 2400w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1050" alt="Kuhinja po meri, Milensa — fotografija 33" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-34-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-34-md.webp" srcset="../assets/img/kuhinje/kuhinje-34-sm.webp 800w, ../assets/img/kuhinje/kuhinje-34-md.webp 1400w, ../assets/img/kuhinje/kuhinje-34-lg.webp 2134w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1575" alt="Kuhinja po meri, Milensa — fotografija 34" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-35-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-35-md.webp" srcset="../assets/img/kuhinje/kuhinje-35-sm.webp 800w, ../assets/img/kuhinje/kuhinje-35-md.webp 1400w, ../assets/img/kuhinje/kuhinje-35-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 35" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-36-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-36-md.webp" srcset="../assets/img/kuhinje/kuhinje-36-sm.webp 800w, ../assets/img/kuhinje/kuhinje-36-md.webp 1400w, ../assets/img/kuhinje/kuhinje-36-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 36" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-37-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-37-md.webp" srcset="../assets/img/kuhinje/kuhinje-37-sm.webp 800w, ../assets/img/kuhinje/kuhinje-37-md.webp 1200w, ../assets/img/kuhinje/kuhinje-37-lg.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1200" height="1600" alt="Kuhinja po meri, Milensa — fotografija 37" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-38-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-38-md.webp" srcset="../assets/img/kuhinje/kuhinje-38-sm.webp 800w, ../assets/img/kuhinje/kuhinje-38-md.webp 1200w, ../assets/img/kuhinje/kuhinje-38-lg.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1200" height="1600" alt="Kuhinja po meri, Milensa — fotografija 38" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-39-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-39-md.webp" srcset="../assets/img/kuhinje/kuhinje-39-sm.webp 800w, ../assets/img/kuhinje/kuhinje-39-md.webp 1101w, ../assets/img/kuhinje/kuhinje-39-lg.webp 1101w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1101" height="1468" alt="Kuhinja po meri, Milensa — fotografija 39" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-40-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-40-md.webp" srcset="../assets/img/kuhinje/kuhinje-40-sm.webp 800w, ../assets/img/kuhinje/kuhinje-40-md.webp 1200w, ../assets/img/kuhinje/kuhinje-40-lg.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1200" height="1600" alt="Kuhinja po meri, Milensa — fotografija 40" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-41-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-41-md.webp" srcset="../assets/img/kuhinje/kuhinje-41-sm.webp 800w, ../assets/img/kuhinje/kuhinje-41-md.webp 1200w, ../assets/img/kuhinje/kuhinje-41-lg.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1200" height="1600" alt="Kuhinja po meri, Milensa — fotografija 41" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-42-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-42-md.webp" srcset="../assets/img/kuhinje/kuhinje-42-sm.webp 800w, ../assets/img/kuhinje/kuhinje-42-md.webp 1052w, ../assets/img/kuhinje/kuhinje-42-lg.webp 1052w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1052" height="1403" alt="Kuhinja po meri, Milensa — fotografija 42" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-43-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-43-md.webp" srcset="../assets/img/kuhinje/kuhinje-43-sm.webp 800w, ../assets/img/kuhinje/kuhinje-43-md.webp 1400w, ../assets/img/kuhinje/kuhinje-43-lg.webp 1792w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1875" alt="Kuhinja po meri, Milensa — fotografija 43" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-44-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-44-md.webp" srcset="../assets/img/kuhinje/kuhinje-44-sm.webp 800w, ../assets/img/kuhinje/kuhinje-44-md.webp 1400w, ../assets/img/kuhinje/kuhinje-44-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 44" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-45-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-45-md.webp" srcset="../assets/img/kuhinje/kuhinje-45-sm.webp 800w, ../assets/img/kuhinje/kuhinje-45-md.webp 1400w, ../assets/img/kuhinje/kuhinje-45-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 45" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-46-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-46-md.webp" srcset="../assets/img/kuhinje/kuhinje-46-sm.webp 800w, ../assets/img/kuhinje/kuhinje-46-md.webp 1400w, ../assets/img/kuhinje/kuhinje-46-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 46" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-47-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-47-md.webp" srcset="../assets/img/kuhinje/kuhinje-47-sm.webp 800w, ../assets/img/kuhinje/kuhinje-47-md.webp 1400w, ../assets/img/kuhinje/kuhinje-47-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 47" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-48-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-48-md.webp" srcset="../assets/img/kuhinje/kuhinje-48-sm.webp 800w, ../assets/img/kuhinje/kuhinje-48-md.webp 1400w, ../assets/img/kuhinje/kuhinje-48-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 48" loading="lazy" decoding="async" />
+            </a>
+            <a href="../assets/img/kuhinje/kuhinje-49-lg.webp" class="gallery__item" data-category="kuhinje" data-caption="Kuhinje">
+              <img src="../assets/img/kuhinje/kuhinje-49-md.webp" srcset="../assets/img/kuhinje/kuhinje-49-sm.webp 800w, ../assets/img/kuhinje/kuhinje-49-md.webp 1400w, ../assets/img/kuhinje/kuhinje-49-lg.webp 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 400px" width="1400" height="1867" alt="Kuhinja po meri, Milensa — fotografija 49" loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
@@ -221,6 +344,20 @@
                 <span class="service-row__arrow" aria-hidden="true">→</span>
               </a>
             </li>
+            <li>
+              <a href="../usluge/komode.html" class="service-row">
+                <span class="service-row__title">Komode</span>
+                <span class="service-row__desc">Komode, konzole, vitrine i noćni ormarići usklađeni sa enterijerom.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="../usluge/kreveti.html" class="service-row">
+                <span class="service-row__title">Kreveti</span>
+                <span class="service-row__desc">Kreveti sa odlaganjem, uzglavljima i rešenjima za dečje sobe.</span>
+                <span class="service-row__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -258,15 +395,16 @@
           <a href="../usluge/tv-komode.html">TV komode</a>
           <a href="../usluge/kupatila.html">Kupatila</a>
           <a href="../usluge/biblioteke.html">Biblioteke</a>
+          <a href="../usluge/komode.html">Komode</a>
+          <a href="../usluge/kreveti.html">Kreveti</a>
         </nav>
         <div class="footer__col">
           <h2 class="footer__title">Kontakt</h2>
-          <a href="tel:+381000000000">+381 00 000 0000</a>
-          <a href="mailto:info@milensa.rs">info@milensa.rs</a>
-          <span>Ulica i broj, Grad</span>
+          <a href="tel:+381631983744">063 198 3744</a>
+          <a href="mailto:milensa.namestaj@gmail.com">milensa.namestaj@gmail.com</a>
+          <span>Beograd, Srbija</span>
           <span class="footer__social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+            <a href="https://www.instagram.com/milensa_proizvodnja_namestaja/" target="_blank" rel="noopener">Instagram</a>
           </span>
         </div>
       </div>
@@ -275,6 +413,6 @@
       </div>
     </footer>
 
-    <script src="../js/main.js?v=3"></script>
+    <script src="../js/main.js?v=6"></script>
   </body>
 </html>
