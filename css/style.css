@@ -587,8 +587,12 @@ body.lightbox-open { overflow: hidden; }
   color: var(--ink); opacity: .42; transition: opacity .3s var(--ease), color .3s var(--ease);
 }
 .brand:hover { opacity: 1; color: var(--bordo); }
-.brand img { height: clamp(28px, 3vw, 40px); width: auto; filter: grayscale(1); opacity: .75; transition: filter .3s, opacity .3s; }
-.brand:hover img { filter: none; opacity: 1; }
+.brand:has(img) { opacity: 1; display: flex; align-items: center; height: 64px; }
+.brand img {
+  height: var(--h, 32px); width: auto; max-width: none;
+  opacity: .5; transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+.brand:hover img { opacity: 1; transform: scale(1.04); }
 @keyframes brandsScroll { to { transform: translateX(-50%); } }
 
 /*  6) ANIMACIJE (scroll reveal)  */
@@ -648,6 +652,8 @@ body.lightbox-open { overflow: hidden; }
   .page-hero__media.media--tall { aspect-ratio: 4 / 4.2; }
 
   .stats li { padding-right: .75rem; }
+  .brand img { height: calc(var(--h, 32px) * .78); }
+  .brand:has(img) { height: 52px; }
 
   .featured { grid-template-columns: 1fr 1fr; }
   .trio { grid-template-columns: 1fr 1fr 1fr; gap: .75rem; }
