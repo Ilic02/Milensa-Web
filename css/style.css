@@ -315,7 +315,7 @@ p + p { margin-top: 1em; }
 .filter.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
 .filter span { margin-left: .3rem; font-size: .8em; opacity: .55; }
 
-.featured { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.75rem); }
+.featured { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.75rem); }
 .project { display: block; }
 .project__media { aspect-ratio: 4 / 5; overflow: hidden; background: var(--gray); }
 .project__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
@@ -505,16 +505,12 @@ p + p { margin-top: 1em; }
 /* Kartice usluga (stranica Usluge): 2 velike + 3 manje */
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(2rem, 3.5vw, 3rem) clamp(1rem, 2vw, 1.75rem); }
 .service-card { display: flex; flex-direction: column; }
-.service-card:first-child { grid-column: span 2; }
 .service-card__media { aspect-ratio: 4 / 5; overflow: hidden; background: var(--gray); }
-.service-card:first-child .service-card__media { aspect-ratio: auto; height: 0; flex: none; padding-bottom: calc(62.5% - .5rem); position: relative; }
-.service-card:first-child .service-card__media img { position: absolute; inset: 0; }
 .service-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
 .service-card:hover .service-card__media img { transform: scale(1.04); }
 .service-card__body { padding-top: 1.5rem; display: flex; flex-direction: column; flex: 1; }
 .service-card__num { font-size: var(--fs-sm); color: var(--bordo); margin-bottom: .6rem; }
 .service-card__title { font-size: var(--fs-h3); margin-bottom: .6rem; transition: color .3s; }
-.service-card:first-child .service-card__title { font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2rem); }
 .service-card p { font-size: var(--fs-sm); color: var(--muted); max-width: 46ch; }
 .service-card__more { margin-top: auto; padding-top: 1.25rem; font-size: var(--fs-sm); font-weight: 500; color: var(--bordo); }
 .service-card__more span { display: inline-block; transition: transform .3s var(--ease); }
@@ -539,6 +535,7 @@ p + p { margin-top: 1em; }
 .gallery__item.is-hidden,
 .gallery__item.is-more { display: none; }
 .gallery__more { display: flex; justify-content: center; margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.gallery__more[hidden] { display: none; }
 
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
@@ -673,8 +670,6 @@ body.lightbox-open { overflow: hidden; }
 
 @media (max-width: 600px) {
   .steps, .values, .service-grid { grid-template-columns: 1fr; }
-  .service-card:first-child { grid-column: auto; }
-  .service-card:first-child .service-card__media { padding-bottom: 0; height: auto; aspect-ratio: 4 / 5; }
   .service-card__media { aspect-ratio: 4 / 4.2; }
   .featured { gap: .75rem; }
   .project__meta { flex-direction: column; gap: .2rem; }
