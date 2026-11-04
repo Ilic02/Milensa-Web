@@ -155,6 +155,12 @@ p + p { margin-top: 1em; }
 .media > img { width: 100%; height: 100%; object-fit: cover; }
 .media--tall { aspect-ratio: 4 / 5; }
 .media--square { aspect-ratio: 1; }
+/* fotografije uz tekst prikazuju se cele, u originalnoj proporciji (bez sečenja) */
+.hero__media.media, .split__media.media, .page-hero__media.media { aspect-ratio: auto; }
+.hero__media.media > img, .split__media.media > img, .page-hero__media.media > img { height: auto; }
+/* izuzetak: fotografija isečena gore/dole (podešava se u HTML-u: --ar proporcija, --pos pozicija) */
+.media.media--crop { aspect-ratio: var(--ar); }
+.media.media--crop > img { height: 100%; object-fit: cover; object-position: 50% var(--pos, 50%); }
 
 /*  HEADER  */
 .header {
@@ -646,8 +652,6 @@ body.lightbox-open { overflow: hidden; }
 
   .hero__grid, .split, .page-hero__grid { grid-template-columns: 1fr; }
   .hero__media { order: -1; }
-  .hero__media.media--tall, .split__media.media--tall { aspect-ratio: 4 / 3; }
-  .page-hero__media.media--tall { aspect-ratio: 4 / 4.2; }
 
   .stats li { padding-right: .75rem; }
   .brand img { height: calc(var(--h, 32px) * .78); }
@@ -670,7 +674,6 @@ body.lightbox-open { overflow: hidden; }
 
 @media (max-width: 600px) {
   .steps, .values, .service-grid { grid-template-columns: 1fr; }
-  .service-card__media { aspect-ratio: 4 / 4.2; }
   .featured { gap: .75rem; }
   .project__meta { flex-direction: column; gap: .2rem; }
   .gallery { columns: 2; column-gap: .6rem; }
